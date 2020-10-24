@@ -13,13 +13,13 @@ def bad_request_response(message):
 	"""
 		Bad Request Response
 	"""
-    context = {
-        'errors': {"message": message},
-        "status": False,
-        "code": 400,
-        "message": "Something went wrong!"
-    }
-    return jsonify(context)
+	context = {
+		'errors': {"message": message},
+		"status": False,
+		"code": 400,
+		"message": "Something went wrong!"
+	}
+	return jsonify(context)
 
 class PremiumPaymentGateway(object):
 	"""
@@ -161,9 +161,11 @@ class ProcessPayment(MethodView):
 			if 'amount' not in param or param['amount'] == "" or param['amount'] is None:
 				return bad_request_response("Please enter Amount.")
 			if 'cvc' not in param or param['cvc'] =="" or param['cvc'] is  None:
-				cvc=""
-			else:
 				cvc=None
+			else:
+				if len(param['cvc'])>3 or len(param['cvc'])<3:
+					return bad_request_response("Please enter Valid CVC code.")
+				cvc=param['cvc']
 			date_obj = datetime.strptime(param['expiry_date'], '%m/%y') 
 			if date_obj.year == current_date.year:
 				if date_obj.month < current_date.month:
