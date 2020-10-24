@@ -27,7 +27,7 @@ stripe==2.49.0
 	
 	pip install -r requiremnets.txt
 
-3.run flask from commandline using 
+3.Run flask from commandline using 
  	
 	flask run
  
