@@ -1,24 +1,35 @@
+# FlaskTest
+
 ### *Tool , Technologies and Version*
 
 Install Python3.8 or any version of Python
 
+Flask==1.1.1
+stripe==2.49.0
+
 ### *Step for setup Project*
 
 1.Clone FlaskTest by using 
-	git clone -b Test https://github.com/nutan0143/FlaskTest.git
+    
+    git clone -b Test https://github.com/nutan0143/FlaskTest.git
 
 2.Make environment in your project
-	virtualenv environment_name.
+    
+    virtualenv environment_name.
 
 3.Activate your environment
-	a. source environment_name/bin/activate   #for mac and ubuntu
-	b. environment_name\Scripts\activate      #for window
+    
+    a. source environment_name/bin/activate   #for mac and ubuntu
+    
+    b. environment_name\Scripts\activate      #for window
 
 4.Install requirement
-	pip install -r requiremnets.txt
+    
+    pip install -r requiremnets.txt
 
-3.run flask from commandline using 
- 	flask run
+3.Run flask from commandline using 
+    
+    flask run
  
 ### *Test Cases:*
 
