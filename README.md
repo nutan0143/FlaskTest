@@ -1,7 +1,7 @@
 Install Python in your system.
 
 Step for setup Project.
-1.Clone FlaskTest by using git clone -b Test git@github.com:nutan0143/FlaskTest.git
+1.Clone FlaskTest by using git clone -b Test https://github.com/nutan0143/FlaskTest.git
 2.Make environment in your project.
 3.Activate your environment
 4.Install reuirement using pip install -r requiremnets.txt
